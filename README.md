@@ -23,7 +23,7 @@ This project demonstrates running Strapi locally using npm and creating a sample
 - Strapi v5
 
 ## Loom Video
-<PASTE YOUR LOOM LINK HERE>
+https://www.loom.com/share/fdbdd28df4544a8c8e584d33bd31c12a
 
 ## Pull Request
 This PR contains the complete setup for Task-1 using a feature branch `aniket`.
