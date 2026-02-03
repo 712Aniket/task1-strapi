@@ -1,61 +1,56 @@
-# 🚀 Getting started with Strapi
+# Task-1: Strapi Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
+This project demonstrates running Strapi locally using npm and creating a sample content type.
 
-### `develop`
+## Setup Steps
+1. Verified Node.js and npm installation
+2. Created Strapi app using:
+   npx create-strapi-app@latest . --quickstart
+3. Started Strapi using:
+   npm run develop
+4. Accessed Admin Panel at:
+   http://localhost:1337/admin
+5. Created a sample content type "Article" with fields:
+   - title
+   - description
+   - publishedDate
+6. Added a sample entry
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Tools Used
+- Node.js v20
+- npm
+- Strapi v5
 
-```
-npm run develop
-# or
-yarn develop
-```
+## Loom Video
+<PASTE YOUR LOOM LINK HERE>
 
-### `start`
+## Pull Request
+This PR contains the complete setup for Task-1 using a feature branch `aniket`.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
-```
-npm run start
-# or
-yarn start
-```
+## Challenges Faced & How They Were Solved
 
-### `build`
+### 1. Package Manager Compatibility
+Initially, the Strapi core repository was cloned as per the instruction. However, it was identified that the Strapi core repository is a Yarn-based monorepo and does not support npm for dependency installation.
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+**Solution:**  
+Since the requirement was to use npm, the approach was adjusted to create a Strapi application using `npx create-strapi-app`, which is the recommended and production-ready way to use Strapi with npm.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+### 2. Repository Ownership & Pull Request Flow
+At the beginning, a pull request was mistakenly created against the official Strapi repository instead of a personal GitHub repository.
+
+**Solution:**  
+A new public repository was created under my GitHub account. The project was pushed to this repository, a separate feature branch (`aniket`) was created, and a pull request was raised from this branch to the main branch, following the correct Git workflow.
+
+---
+
+### 3. Local Environment & Folder Structure Issues
+While setting up the project on Windows with WSL, there were issues related to folder structure, locked directories, and non-empty directories during setup.
+
+**Solution:**  
+The workspace was cleaned, directories were reset properly, and the project was recreated in a clean folder. This ensured a stable local development environment and avoided conflicts during setup.
+
+
